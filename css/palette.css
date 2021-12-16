@@ -1,0 +1,125 @@
+html,
+/*body {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    text-align: center;*/
+/*}*/
+
+body {
+    box-sizing: border-box;
+    /*padding-top: 180px;*/
+    background: #ffffff;
+}
+
+input {
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.button span {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background: #eeeeee;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transition: ease .3s;
+}
+
+.button span:hover {
+    padding: 10px;
+}
+
+.code36 .button span {
+    background: #b76e79;
+}
+
+.code41 .button span {
+    background: #b76e7f;
+}
+
+.code47 .button span {
+    background: #7a3d45;
+}
+
+.code19 .button span {
+    background: #d31dbc;
+}
+
+.code48 .button span {
+    background: #c00101;
+}
+
+.code4 .button span {
+    background: #911b05;
+}
+
+.code43 .button span {
+    background: #b76e7f;
+}
+
+.code6 .button span {
+    background: #8a0514;
+}
+
+.code49 .button span {
+    background: #1c5944;
+}
+.code14 .button span {
+    background: #d95b85;
+}
+
+
+.layer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    /*transition: ease .3s;*/
+    z-index: -1;
+}
+
+.orange input:checked ~ .layer {
+    background: #F4511E;
+}
+
+.amber input:checked ~ .layer {
+    background: #FFB300;
+}
+
+.lime input:checked ~ .layer {
+    background: #7CB342;
+}
+
+.teal input:checked ~ .layer {
+    background: #00897B;
+}
+
+.blue input:checked ~ .layer {
+    background: #1E88E5;
+}
+
+.indigo input:checked ~ .layer {
+    background: #3949AB;
+}

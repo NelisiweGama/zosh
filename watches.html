@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Boutique | Ecommerce bootstrap template</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <!-- Lightbox-->
+  <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+  <!-- Range slider-->
+  <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+  <!-- Bootstrap select-->
+  <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+  <!-- Owl Carousel-->
+  <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.css">
+  <!-- Google fonts-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/palette.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  <script src="add_to_cart.js" async></script>
+
+</head>
+<body>
+<div class="page-holder">
+  <!-- navbar-->
+  <header class="header" >
+    <div class="container px-0 px-lg-3">
+      <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.html"></a>
+        <div style="padding-left: 3em; padding-right: 3em;" class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <!-- Link--><a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <!-- Link--><a class="nav-link" href="index.html#catalogue">Shop</a>
+            </li>
+
+          </ul>
+          <ul  class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link active" href="cart.html"><i class="fas fa-shopping-bag mr-1 text-gray"></i>Cart<span>0</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section style="margin-top: 3em" class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6">
+          <!-- PRODUCT SLIDER-->
+          <div class="row m-sm-0">
+            <div class="col-sm-10 order-1 order-sm-2">
+              <div class="owl-carousel product-slider" data-slider-id="1">
+                <a class="d-block" href="img/watches.jpeg" data-lightbox="product" title="Colour 41"><img class="img-fluid" src="img/watches.jpeg" alt="..."></a>
+<!--                <a class="d-block" href="img/shades1.jpg" data-lightbox="product" title="Colour 47"></a>-->
+<!--                <a class="d-block" href="img/shades.jpg" data-lightbox="product" title="Colour 4"></a>-->
+<!--                <a class="d-block" href="img/ombre3.jpg" data-lightbox="product" title="Colour 19"></a>-->
+<!--                <a class="d-block" href="img/ombre2.jpg" data-lightbox="product" title="Colour 6"></a>-->
+<!--                <a class="d-block" href="img/blue_ombre.jpg" data-lightbox="product" title="Colour 36"></a>-->
+<!--                <a class="d-block" href="img/black_square.jpg" data-lightbox="product" title="Colour 36"></a>-->
+              </div>
+<!--              <p style="color: #b6b6b6;text-align: center"> (click on image to see more options)</p>-->
+            </div>
+          </div>
+        </div>
+        <!-- PRODUCT DETAILS-->
+        <div class="col-lg-6">
+          <h1>Zosh Watch For Men</h1>
+          <p class="text-muted lead">R450</p>
+<!--          <p class="text-small mb-4">Zosh watches for men, available brown and black. </p>-->
+          <div class="row align-items-stretch mb-4">
+            <ul class="list-unstyled small d-inline-block">
+              <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">Colour:</strong><span id="color-code-mini" class="color ml-2 text-muted">Black</span></li>
+              <!--              <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Colour:</strong><a class="reset-anchor ml-2" href="#">Midnight Red Shade</a></li>-->
+              <div style="margin-left: 15px;">
+                <p>Select color from the dropdown list below</p>
+
+                <select  style="width: fit-content; height: 20px; border-radius: 5px;" id="mySelect" onchange="myFunction()">
+                  <option value="Black">Black</option>
+                  <option value="Brown">Brown</option>
+                </select>
+              </div>
+            </ul>
+          </div>
+          <div class="col-sm-3 pl-sm-0"><a id = 'add_to_cart_button' class="btn btn-outline-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" >Add to cart</a></div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- RELATED PRODUCTS-->
+    <h2 style="margin-left: 3em"  class="h5 text-uppercase mb-4">Related products</h2>
+    <div class="row">
+      <!-- PRODUCT-->
+      <div style="margin-left: 3em"  class="col-lg-3 col-sm-6">
+        <div class="product text-center skel-loader">
+          <div class="d-block mb-3 position-relative"><img class="img-fluid w-100" src="img/glasses%20formen.jpg" alt="...">
+            <div class="product-overlay">
+              <ul class="mb-0 list-inline">
+                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="formenglass.html">View Product</a></li>
+              </ul>
+            </div>
+          </div>
+          <h6> <a class="reset-anchor" href="detail_cat.html">Zosh Sunglasses For Men</a></h6>
+          <p class="small text-muted">R350</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark text-white">
+    <div class="container py-4">
+      <div class="row py-5">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h6 class="text-uppercase mb-3">Help &amp; Contact Us</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a class="footer-link" style="pointer-events: none; color: #959595">Call +2772 799 1486</a>
+            </li>
+            <li><a class="footer-link" href="https://wa.me/message/46DC43ENMF7YE1">Whatsapp +2778 415
+              5529</a>
+            </li>
+            <li><a class="footer-link" href="contact.html">Email zoshcosmetics@gmail.co</a></li>
+            <li><a class="footer-link" href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="text-uppercase mb-3">Social media pages</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a class="footer-link" href="http://www.instagram.com/zoshcosmetics2021/" target="_blank">
+              <img src="https://img.icons8.com/color/19/000000/instagram-new--v1.png"/>Instagram</a>
+            </li>
+
+            <li><a class="footer-link" href="https://vm.tiktok.com/ZSJpxdMER/" target="_blank">
+              <img src="https://img.icons8.com/color/20/000000/tiktok.png"/>Tik Tok</a></li>
+
+            <li><a class="footer-link" href="https://www.facebook.com/profile.php?id=100009396604153"
+                   target="_blank">
+              <img src="https://img.icons8.com/fluent/18/000000/facebook-new.png"/>Facebook</a>
+            </li>
+
+            <li><a class="footer-link" href="https://wa.me/message/46DC43ENMF7YE1" target="_blank">
+              <img src="https://img.icons8.com/office/16/000000/whatsapp--v1.png"/>Whatsapp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top pt-4" style="border-color: #ccc !important">
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="small" style="color: #ccc;">&copy; 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript files-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+  <script src="vendor/nouislider/nouislider.min.js"></script>
+  <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+  <script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
+  <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+  <script src="js/front.js"></script>
+  <script>
+    // ------------------------------------------------------- //
+    //   Inject SVG Sprite -
+    //   see more here
+    //   https://css-tricks.com/ajaxing-svg-sprite/
+    // ------------------------------------------------------ //
+    function myFunction() {
+      var x = document.getElementById("mySelect").value;
+      document.getElementById("color-code-mini").innerHTML = x;
+    } 
+
+    function injectSvgSprite(path) {
+
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", path, true);
+      ajax.send();
+      ajax.onload = function(e) {
+        var div = document.createElement("div");
+        div.className = 'd-none';
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      }
+    }
+    // this is set to BootstrapTemple website as you cannot
+    // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+    // while using file:// protocol
+    // pls don't forget to change to your domain :)
+    injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+
+  //this must be present in all the html files that will be rendered
+  function set_cart_values() {
+   var num = 0
+   if (localStorage.getItem('cart')){
+      var items = localStorage.getItem('cart');
+      items = JSON.parse(items)
+      console.log(items)
+      for(let i = 0 ; i<items.length; i++){
+        num += items[i].quantity 
+  }
+  
+  document.querySelector('.nav-link span').textContent = "(" + (num) + ")";
+
+  }
+ }
+ set_cart_values()
+
+
+
+  </script>
+  <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</div>
+</body>
+</html>
