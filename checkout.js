@@ -35,6 +35,9 @@ function order_summary(){
 }
 
 function sendData(){
+  //disable button on click place order button
+  let button = document.querySelector("#submit")
+  button.disabled = true;
 
   console.log('here');
   var firstname= $('#firstName').val();
