@@ -42,7 +42,8 @@
     <!-- navbar-->
     <header class="header">
         <div class="container px-0 px-lg-3">
-            <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.html"></a>
+            <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand"
+                                                                              href="index.html"></a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent"
                      style="padding-left: 3em; padding-right: 3em;">
                     <ul class="navbar-nav mr-auto">
@@ -64,31 +65,23 @@
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="cart.html"></i></a>
-                        <li class="nav-item"><a class="nav-link active" href="cart.html"><i class="fas fa-shopping-bag mr-1 text-gray"></i>Cart<span>0</span></a></li>
-                        </ul>
+                        <li class="nav-item"><a class="nav-link active" href="cart.html"><i
+                                class="fas fa-shopping-bag mr-1 text-gray"></i>Cart<span>0</span></a></li>
+                    </ul>
                 </div>
             </nav>
         </div>
     </header>
 
     <!-- HERO SECTION-->
-    <div class="container" style=" margin: 3em auto; padding: 5em;">
-        <section class="hero  bg-cover  d-flex align-items-center sections"
-                 style="background-image: url('img/zosh_unlimited.png')"; >
-            <div id="welcome" style="
-                    bottom: 0;
-                    margin-bottom: 0;
-                    margin-top: auto;
-                    margin-left: 3em;
-                    margin-bottom: 4em;
-                    background-color: #555;
-                    /*color: white;*/
-                    font-size: 16px;
-                    border: none;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    text-align: center;">
-                <a class="btn" href="#catalogue">Browse Catalogue</a>
+    <div class="container" style=" margin: 3em auto; padding: 5em; height:100%;">
+        <section class="py-5">
+            <div class="container col-md-12" style="padding: 0;">
+                <a href="index.html#catalogue">
+                    <img src="img/landing.png" style=" width: 100%; margin: 0;position: relative; ">
+
+                </a>
+<!--                <button class="btn" style="position: absolute; border-radius: 6px; top: 60%; right: 0; border-color: #0b2e13; border-width: thick">Button</button>-->
             </div>
         </section>
         <!-- CATEGORIES SECTION-->
@@ -100,8 +93,8 @@
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <a class="category-item mb-4" href="detail_matte.html">
-                    <img alt="" class="img-fluid" src="img/matte_lipsticks.jpg">
-                    <strong class="category-item-title">Matte Lipstick</strong>
+                        <img alt="" class="img-fluid" src="img/matte_lipsticks.jpg">
+                        <strong class="category-item-title">Matte Lipstick</strong>
                     </a>
                     <a class="category-item mb-4" href="detail_mini.html">
                         <img alt="" class="img-fluid" src="img/3in1.jpeg">
@@ -123,11 +116,12 @@
                         <strong class="category-item-title">Watches for men</strong>
                     </a>
                     <a class="category-item mb-4" href="ladies_watches.html">
-                        <img alt="" class="img-fluid" src="img/gold.jpg"  style="width: 300px; height: 337px; object-fit: cover;">
+                        <img alt="" class="img-fluid" src="img/gold.jpg"
+                             style="width: 300px; height: 337px; object-fit: cover;">
                         <strong class="category-item-title">Watches for ladies</strong>
                     </a>
                 </div>
-                <div  class="col-md-4 mb-4 mb-md-0">
+                <div class="col-md-4 mb-4 mb-md-0">
                     <a class="category-item mb-4" href="detail_cat.html">
                         <img alt="" class="img-fluid" src="img/cateye.jpeg">
                         <strong class="category-item-title">Cat Eye</strong>
@@ -231,7 +225,7 @@
                         </div>
                     </div>
                     <h6><a class="reset-anchor" href="detail_matte.html">Zosh Sunglasses For Men</a></h6>
-                        <p class="small text-muted" style="float: left; width:45%;">R350</p>
+                    <p class="small text-muted" style="float: left; width:45%;">R350</p>
                 </div>
             </div>
         </section>
@@ -362,22 +356,23 @@
         // while using file:// protocol
         // pls don't forget to change to your domain :)
         injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
-function set_cart_values() {
-  var num = 0
-  if (localStorage.getItem('cart')){
-      var items = localStorage.getItem('cart');
-      items = JSON.parse(items)
-      console.log(items)
-      for(let i = 0 ; i<items.length; i++)
-      {
-        num += items[i].quantity 
-      }
-  
-      document.querySelector('.nav-link span').textContent = "(" + (num) + ")";
 
-    }
-}
- set_cart_values()
+        function set_cart_values() {
+            var num = 0
+            if (localStorage.getItem('cart')) {
+                var items = localStorage.getItem('cart');
+                items = JSON.parse(items)
+                console.log(items)
+                for (let i = 0; i < items.length; i++) {
+                    num += items[i].quantity
+                }
+
+                document.querySelector('.nav-link span').textContent = "(" + (num) + ")";
+
+            }
+        }
+
+        set_cart_values()
 
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
