@@ -87,6 +87,13 @@ input {
     background: #d95b85;
 }
 
+.codePink .button span {
+    background: #bd5d7d;
+}
+
+.codeBlue .button span {
+    background: #5c8dd6;
+}
 
 .layer {
     display: block;
