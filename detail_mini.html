@@ -49,6 +49,9 @@
             <li class="nav-item">
               <!-- Link--><a class="nav-link" href="index.html#catalogue">Shop</a>
             </li>
+            <li class="nav-item">
+              <!-- Link--><a class="nav-link " href="contact.html">Contact</a>
+          </li>
           </ul>
           <ul  class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link active" href="cart.html"><i class="fas fa-shopping-bag mr-1 text-gray"></i>Cart<span>0</span></a></li>
@@ -89,8 +92,7 @@
           <p class="text-small mb-4">Zosh mini box set. What's in the box? Three mini lipsticks of different shades. Boxes available in 5 different sets. See pictures for box colour codes. All lipsticks are waterproofed, and can be wiped easily with make-up remover or face wipes.</p>
           <div class="row align-items-stretch mb-4">
             <ul class="list-unstyled small d-inline-block">
-              <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">Code:</strong><span id="color-code-mini " class=" color ml-2 text-muted">Box 04</span></li>
-<!--              <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Colour:</strong><a class="reset-anchor ml-2" href="#">Midnight Red Shade</a></li>-->
+              <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">Code:</strong><span id="color-code-mini" class=" color ml-2 text-muted">Box 04</span></li>
               <div style="margin-left: 15px;">
                 <p>Select mini box color from the list.</p>
 
@@ -148,7 +150,7 @@
         <div class="col-md-4">
           <h6 class="text-uppercase mb-3">Social media pages</h6>
           <ul class="list-unstyled mb-0">
-            <li><a class="footer-link" href="http://www.instagram.com/zoshcosmetics2021/" target="_blank">
+            <li><a class="footer-link" href="http://www.instagram.com/zosh_unlimited/" target="_blank">
               <img src="https://img.icons8.com/color/19/000000/instagram-new--v1.png"/>Instagram</a>
             </li>
 
@@ -169,7 +171,7 @@
       <div class="border-top pt-4" style="border-color: #ccc !important">
         <div class="row">
           <div class="col-lg-6">
-            <p class="small" style="color: #ccc;">&copy; 2021</p>
+            <p class="small" style="color: #ccc;">&copy; 2022</p>
           </div>
         </div>
       </div>
@@ -187,15 +189,23 @@
   <script src="add_to_cart.js" ></script>
 
   <script>
-    // ------------------------------------------------------- //
-    //   Inject SVG Sprite -
-    //   see more here
-    //   https://css-tricks.com/ajaxing-svg-sprite/
-    // ------------------------------------------------------ //
+    let boxCode = document.getElementById("color-code-mini");
     function myFunction() {
-      var x = document.getElementById("mySelect").value;
-      document.getElementById("color-code-mini").innerHTML = x;
+      var boxVal = document.getElementById("mySelect").value;
+      boxCode.innerHTML = boxVal;
     }
+
+    // let code = document.getElementById("color-code")
+    // let color = document.getElementById("color-text")
+    // //default color
+    // code.innerHTML="36"
+    // color.innerHTML="Nude Blush Shade"
+
+    // function box04() {
+    //       console.log("Clicking on box 04")
+    //       code.innerHTML="41"
+    //       color.innerHTML="Dusty Nude Shade"
+    //     }
 
     function injectSvgSprite(path) {
 
@@ -209,10 +219,6 @@
         document.body.insertBefore(div, document.body.childNodes[0]);
       }
     }
-    // this is set to BootstrapTemple website as you cannot
-    // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
-    // while using file:// protocol
-    // pls don't forget to change to your domain :)
     injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
 
       //this must be present in all the html files that will be rendered
